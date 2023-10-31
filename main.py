@@ -12,8 +12,6 @@ mysql.init_app(app)
 def mysql():
     return render_template('index.html')
 
-def new_func(app):
-    app.run()
 
 if __name__ == '__main__':
-    new_func(app)
+    app.run()
