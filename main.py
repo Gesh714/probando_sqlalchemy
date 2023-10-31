@@ -1,4 +1,4 @@
-from Flask import Flask, render_template, url_for, request, redirect
+from flask import Flask, render_template, url_for, request, redirect
 
 app = Flask(__name__)
 
@@ -6,5 +6,8 @@ app = Flask(__name__)
 def mysql():
     return render_template('index.html')
 
+def new_func(app):
+    app.run(port=3000,debug=True)
+
 if __name__ == '__main__':
-    app.run(debug=True)
+    new_func(app)
